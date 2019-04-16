@@ -1,17 +1,16 @@
 <template>
   <div id="quicksort">
-    <h1>quicsort</h1>
-    <p>{{quicksort(this.array)}}</p>
+    <p>QuickSort: {{quicksort(this.array)}}</p>
   </div>
 </template>
 
 <script>
 export default {
   name: "Quicksort",
+  props: ["array"],
   data() {
     return {
-      greeting: "Hello",
-      array: [8, 10, 4, 11, 3]
+      greeting: "Hello"
     };
   },
   methods: {
@@ -19,8 +18,8 @@ export default {
     quicksort(a) {
       let p = a[0];
       let r = a[a.length - 1];
+      console.log("p", p, "r", r);
       if (p < r) {
-        console.log("here");
       }
     }
   }

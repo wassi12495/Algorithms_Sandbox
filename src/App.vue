@@ -1,16 +1,25 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
-    <Quicksort/>
+    <p>{{this.array}}</p>
+    <Quicksort :array="this.array"/>
+    <Mergesort :array="this.array"/>
   </div>
 </template>
 
 <script>
 import Quicksort from "./components/Quicksort.vue";
+import Mergesort from "./components/Mergesort.vue";
 export default {
   name: "app",
   components: {
-    Quicksort: Quicksort
+    Quicksort: Quicksort,
+    Mergesort: Mergesort
+  },
+  data() {
+    return {
+      array: [8, 10, 4, 11, 3, 9]
+    };
   }
 };
 </script>
